@@ -3,12 +3,12 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     var botEmbed = new discord.MessageEmbed()
-            .setTitle('AllDesign')
-            .setDescription("Free Designs")
+            .setTitle('Babbelhoek Community')
+            .setDescription("Babbel hier of speel samen wat game's.")
             .setColor("#0099ff")
             .addField("Bot naam", client.user.username)
             .setTimestamp()
-            .setFooter('Kwaliteit Is ons hoofddoel');
+            .setFooter('Gezelligheid is onze prioriteit');
 
         return message.channel.send(botEmbed);
 

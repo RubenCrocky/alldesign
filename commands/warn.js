@@ -41,13 +41,13 @@ module.exports.run = async (client, message, args) => {
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
 
-    var channel = message.member.guild.channels.cache.get("712304472197693491");
+    var channel = message.member.guild.channels.cache.get("729001307112996964");
 
     if (!channel) return;
 
     channel.send(embed);
 
-    if (warns[warnUser.id].warns == 9999999) {
+    if (warns[warnUser.id].warns == 100000) {
 
         var embed = new discord.MessageEmbed()
             .setColor("#ff0000")
@@ -56,7 +56,7 @@ module.exports.run = async (client, message, args) => {
 
         message.channel.send(embed);
 
-    } else if (warns[warnUser.id].warns == 10000000) {
+    } else if (warns[warnUser.id].warns == 1000000) {
         message.guild.member(warnUser).ban(reason);
         message.channel.send(`${warnUser} is verbannen door de bot wegens te veel warns`);
     }

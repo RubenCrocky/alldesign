@@ -39,8 +39,7 @@ client.on("guildMemberAdd", member => {
 
     // member.roles.add(role);
 
-    var channel = member.guild.channels.cache.get('711847922039259178');
-    var logChannel = member.guild.channels.cache.get('712304472197693491');
+    var channel = member.guild.channels.cache.get('729001941300150314');
 
 
     if (!channel) return;
@@ -55,18 +54,14 @@ client.on("guildMemberAdd", member => {
         .setFooter("Gebruiker gejoined")
         .setTimestamp();
 
-    channel.send(joinEmbed),
-
-    channel.send(logChannel);
-
+    channel.send(joinEmbed);
 
 });
 
 
 client.on("guildMemberRemove", member => {
 
-    var channel = member.guild.channels.cache.get('711847922039259178');
-    var logChannel = member.guild.channels.cache.get('712304472197693491');
+    var channel = member.guild.channels.cache.get('729001941300150314');
 
     if (!channel) return;
 
@@ -77,9 +72,7 @@ client.on("guildMemberRemove", member => {
         .setFooter("Gebruiker geleaved")
         .setTimestamp();
 
-    channel.send(leaveEmbed),
-
-    channel.send(logChannel);
+    channel.send(leaveEmbed);
 
 });
 
@@ -98,7 +91,7 @@ client.on("messageDelete", messageDeleted => {
         .setTimestamp()
         .setColor("#FF0000");
 
-    client.channels.cache.find(c => channel.name == "logs").send(embed);
+    client.channels.cache.find(c => channel.name == "「📜」logs").send(embed);
 
 });
  
@@ -106,7 +99,7 @@ client.on("ready", async () => {
  
     console.log(`${client.user.username} is online.`);
  
-    client.user.setActivity("AllDesign", { type: "WATCHING" });
+    client.user.setActivity("Babbelhoek Community", { type: "WATCHING" });
  
 });
  
